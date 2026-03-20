@@ -7,6 +7,7 @@
     $LOCAL_PORT     = '5432';
 
     //Supabase Database configuration
+    
     $SUPA_HOST      = 'aws-0-us-west-2.pooler.supabase.com';
     $SUPA_DBNAME    = 'postgres';
     $SUPA_USERNAME  = 'postgres.jhklctlcgozmkrerafxd';
@@ -37,7 +38,7 @@
     }else{
         echo "Local success connection !!!";
     }
-
+/*
     $supa_conn =pg_connect ($supa_data_connection);
 
     if(!$supa_conn){
@@ -46,5 +47,5 @@
     }else{
         echo "<br> Supa success connection !!!";
     }
-
+*/
 ?>

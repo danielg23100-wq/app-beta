@@ -9,11 +9,12 @@ $l_name = $_POST ['lname'];
 $e_mail = $_POST ['email'];
 $m_phone= $_POST ['mphone'];
 $p_sswd = $_POST ['password'];
+$enc_pass=md5 ($p_sswd);
 
 //Query to insert into SQL.
 
 $sql = "INSERT INTO users_model (firstname, lastname, email, mobile_phone, password)
-VALUES('$f_name', '$l_name', '$e_mail', '$m_phone', '$p_sswd')";
+VALUES('$f_name', '$l_name', '$e_mail', '$m_phone', '$enc_pass')";
 
 //Execute query
 

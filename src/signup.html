@@ -7,18 +7,30 @@
     <link rel="icon" type="image/png" href="images/casa.png"
 </head>
 <body bgcolor ="438A43">
-    <label for="fname">Firstname</label><br>
-    <input type="text"><br>
+    <table border ="1" align="center">
+
+<form name ="frtn-user" action="signup.php" method="POST" aling="center">
+    <tr><td><label for="fname">Firstname</label><br>
+    <input type="text" name="fname" required > <br>
+
     <label for="lname">Last Name</label><br>
-    <input type="text"><br>
+    <input type="text" name="lname" required > <br>
+
     <label for="email">Email</label><br>
-    <input type="text"><br>
+    <input type="text" name="email" required > <br>
+
     <label for="">Password</label><br>
-    <input type="password"><br>
+    <input type="password" name="password" required > <br>
+
     <label for="passwd">Paswword again</label><br>
     <input type="password"><br>
+
+
     <label for="mphone">Mobail Phone</label><br>
-    <input type="number"><br><br>
-    <button>Register</button>
+    <input type="number" name="mphone"> <br><br>
+
+    <button type="submit">Register</button>
+    </form>
+    </table>
 </body>
 </html>

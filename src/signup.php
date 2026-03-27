@@ -32,15 +32,21 @@ if (pg_num_rows($res_phone) > 0) {
     exit;
 }
 
-
-
 $sql = "INSERT INTO users_model (firstname, lastname, email, mobile_phone, password)
-        VALUES ('$f_name', '$l_name', '$e_mail', '$m_phone', '$enc_pass')";
+VALUES('$f_name','$l_name','$e_mail','$m_phone','$enc_pass')" ;
 
-$result = pg_query($local_conn, $sql);
+$res_local = pg_query($local_conn, $sql); 
 
-if ($result) {
-    echo "Registro exitoso.";
+if ($res_local) {
+
+    $res_supa = pg_query($supa_conn, $sql);
+
+    if ($res_supa) {
+        echo "¡Listo! Guardado en ambos lados.";
+    } else {
+        echo "Error: Se guardó en local pero no en la nube.";
+    }
 } else {
-    echo "Error al registrar el usuario.";
+    echo "Error: No se pudo guardar ni en local.";
 }
+

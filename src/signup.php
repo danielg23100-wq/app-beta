@@ -19,7 +19,7 @@ $res_email = pg_query($local_conn, $check_email);
 
 if (pg_num_rows($res_email) > 0) {
     echo "Error: El correo electrónico ya se encuentra registrado.";
-    exit; // Detiene la ejecución
+    exit; 
 }
 
 
@@ -49,4 +49,8 @@ if ($res_local) {
 } else {
     echo "Error: No se pudo guardar ni en local.";
 }
+
+
+$enc_pass = password_hash($p_sswd, PASSWORD_BCRYPT);
+
 

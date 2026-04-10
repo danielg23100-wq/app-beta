@@ -38,7 +38,7 @@
     }else{
         echo "Local success connection !!!";
     }
-/*
+
     $supa_conn =pg_connect ($supa_data_connection);
 
     if(!$supa_conn){
@@ -47,5 +47,5 @@
     }else{
         echo "<br> Supa success connection !!!";
     }
-*/
+
 ?>
